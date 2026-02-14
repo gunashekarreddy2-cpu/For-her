@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+const hearts = document.createElement("div");
+document.body.appendChild(hearts);
+
+setInterval(()=>{
+    const h = document.createElement("span");
+    h.innerHTML = "💗";
+    h.style.position="fixed";
+    h.style.left=Math.random()*200+"vw";
+    h.style.top="100vh";
+    h.style.fontSize=(12+Math.random()*20)+"px";
+    h.style.opacity=Math.random();
+    h.style.transition="transform 3s linear, opacity 3s";
+    document.body.appendChild(h);
+
+    setTimeout(()=>{
+        h.style.transform="translateY(-110vh)";
+        h.style.opacity="0";
+    },50);
+
+    setTimeout(()=>h.remove(),6000);
+},500);
+</script>
+
+<body>
+    <section id="home" class="home">
+        <div class="home_section">
+            <div id="container">
+                <div class="left"></div>
+                <div class="right"></div>
+                <a href="letter.html">
+                    <b>Happy Valentine's<br> Day Madam<br><span>Click Here</span></b>
+                </a>
+            </div>
+           <h1 id="typing"></h1>
+            <h2>Hello Madam Yala Unaru 💖<br>Ente ala chustunaru<br>piuna hear nee okka sare Nokande</h2>
+        </div>
+    </section>
+</body>
+</html>
